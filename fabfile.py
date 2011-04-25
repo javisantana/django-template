@@ -15,6 +15,7 @@ env.password = 'vagrant'
 env.hosts = ['127.0.0.1:2222']
 env.deploy_folder = '/home/vagrant/auto'
 env.git_repo = 'https://github.com/javisantana/django-template'
+env.git_repo = '/home/vagrant/repo/app'
 
 def pkg_install(pkg):
     """ install pkg using apt-get """
@@ -76,5 +77,5 @@ def reload():
 
 def update_dependencies():
     """ update depencies from requirements """
-    sudo("%(deploy_folder)s/env/bin/pip install -r %(deploy_folder)s/app/src/requirements.txt" % env)
+    sudo("%(deploy_folder)s/env/bin/pip install -r %(deploy_folder)s/app/django-template/requirements.txt" % env)
     
