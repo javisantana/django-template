@@ -78,4 +78,5 @@ def reload():
 def update_dependencies():
     """ update depencies from requirements """
     sudo("%(deploy_folder)s/env/bin/pip install -r %(deploy_folder)s/app/django-template/requirements.txt" % env)
+    sudo("%(deploy_folder)s/env/bin/pip install -r %(deploy_folder)s/app/deploy/production_requirements.txt" % env)
     
